@@ -10,7 +10,7 @@ class Validate:
             data (dictionary): data from request
 
         Returns:
-            bool: False specified key is not available
+            bool: True if specified key is available
         """
 
         expected_keys = ("message", "recipient")
@@ -22,10 +22,13 @@ class Validate:
         return True
 
     def is_valid_phone_number(data) -> bool:
-        """ 
-        *   checks if phone number submitted is valid
-        *   @param data, dictionary
-        *   returns bool
+        """checks if phone number submitted is valid
+
+        Args:
+            data ([dict]): contains payload - read documentation for contents
+
+        Returns:
+            bool: True if phone number is valid
         """
 
         try:
