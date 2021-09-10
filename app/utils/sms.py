@@ -14,29 +14,13 @@ class Validate:
             bool: False specified key is not available
         """
 
-        expected_keys = ("api_key", "message", "recipient")
+        expected_keys = ("message", "recipient")
 
         if not all(keys in data for keys in expected_keys):
 
             return False
 
         return True
-
-    def validate_api_key(data) -> bool:
-        """ 
-        *   validates api_key coming in to check if its authorized to make calls
-        *   @param data
-        *   return bool
-        """
-
-        #! [TODO] connect to a key validation endpoint
-        api_key = "6ec4fbee-3dc3-4fa1-9b75-e44d3d78fe06"
-
-        for key in data:
-            if data["api_key"] == api_key:
-                return True
-
-        return False
 
     def is_valid_phone_number(data) -> bool:
         """ 
