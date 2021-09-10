@@ -4,7 +4,7 @@ import phonenumbers
 class Validate:
 
     def __init__(self, data) -> None:
-        data = self.data
+        self.data = data
 
     def has_required_keys(self) -> bool:
         """validates data coming in to ensure it has all required keys
@@ -34,10 +34,7 @@ class Validate:
             bool: True if phone number is valid
         """
 
-        try:
-            phone_number = phonenumbers.parse(self.data['recipient'], None)
-        except:
-            return False
+        phone_number = phonenumbers.parse(self.data['recipient'], None)
 
         if not phonenumbers.is_valid_number(phone_number):
             return False
