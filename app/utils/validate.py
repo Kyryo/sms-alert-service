@@ -3,7 +3,7 @@ import phonenumbers
 
 class Validate:
 
-    def check_keys(data) -> bool:
+    def has_required_keys(data) -> bool:
         """validates data coming in to ensure it has all required keys
 
         Args:
