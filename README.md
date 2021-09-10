@@ -1,6 +1,6 @@
-# Alert API
+# SMS Alert Service
 ## About
-Service that handles notifications for Kyryo products
+A simple service for sending SMS Alerts using Twilio's SMS API 
 ## Starting the service
 Check if a port is free, by running the following command:
 ```
