@@ -14,13 +14,14 @@ class Send:
         Returns:
             bool: True if message is sent successfully
         """
-        #!   [TODO] handle the exception better - hand each/ specific exception and not just everything, that's bad code!
+        #!   [TODO] handle the exception better - handle specific exception and not just everything, that's bad code!
 
         try:
 
             r = requests.post(self.url, json=self.params, headers=self.headers)
 
         except Exception as e:
+            #! [TODO] replace print with logging
             print("DevOps, some error occured:", e)
             return False
 
@@ -28,7 +29,7 @@ class Send:
 
             r.raise_for_status()
 
-            #! [TODO] change this to logging
+            #! [TODO] replace print with logging
             print('sent successfully', r.json())
 
             return True
