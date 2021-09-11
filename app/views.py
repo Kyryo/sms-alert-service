@@ -16,3 +16,5 @@ def send_sms():
 
     if not validator.is_valid_phone_number():
         return json.dumps({"status": "error", "error": lang.error['invalid_phone']}), 400
+
+    return json.dumps({"status": "success", "message": "your message was sent successfully"}), 200
