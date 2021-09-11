@@ -9,14 +9,12 @@ class Send:
         self.headers = headers
 
     def message(self):
-        """ 
-        *   sends SMS to recipients through the twilio API
-        *   @param data, dictionary
-        *   returns bool 
-        !   [TODO] handle the exception when we fail to send SMS better
-        !   [TODO] send data to billing API
-        !   [TODO] send data to analytics API 
+        """sends SMS to recipients through the twilio API 
+
+        Returns:
+            bool: True if message is sent successfully
         """
+        #!   [TODO] handle the exception better - hand each/ specific exception and not just everything, that's bad code!
 
         try:
 
