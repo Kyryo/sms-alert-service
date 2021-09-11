@@ -3,8 +3,6 @@ from werkzeug.datastructures import Headers
 from . import app
 from flask import request
 import json
-import logging
-logging.basicConfig(filename='error.log', level=logging.DEBUG)
 
 
 @app.route('/v1/sms/send', methods=['POST'])
