@@ -40,6 +40,7 @@ class Validate:
             phone_number = phonenumbers.parse(self.data['recipient'], None)
 
         except Exception as e:
+            #! [TODO] change print to logging
             print("DevOps, some error occured:", e)
 
         else:
