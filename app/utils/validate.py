@@ -1,4 +1,6 @@
 import phonenumbers
+import logging
+logging.basicConfig(filename='error.log', level=logging.DEBUG)
 
 
 class Validate:
@@ -33,10 +35,16 @@ class Validate:
         Returns:
             bool: True if phone number is valid
         """
+        #! [TODO] maybe could help to specify the exceptions to handle, however, right now all we want to know is if the phone number provided is a valid phone number.
+        try:
+            phone_number = phonenumbers.parse(self.data['recipient'], None)
 
-        phone_number = phonenumbers.parse(self.data['recipient'], None)
+        except Exception as e:
+            print("DevOps, some error occured:", e)
 
-        if not phonenumbers.is_valid_number(phone_number):
-            return False
+        else:
+
+            if not phonenumbers.is_valid_number(phone_number):
+                return False
 
         return True
