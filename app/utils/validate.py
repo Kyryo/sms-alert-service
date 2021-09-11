@@ -35,7 +35,7 @@ class Validate:
         Returns:
             bool: True if phone number is valid
         """
-        #! [TODO] maybe could help to specify the exceptions to handle, however, right now all we want to know is if the phone number provided is a valid phone number.
+        #! [TODO] maybe could help to specify the exceptions to handle, however, right now all we want to know is if the phone number provided is a valid phone number, so that works for now.
         try:
             phone_number = phonenumbers.parse(self.data['recipient'], None)
 
