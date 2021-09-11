@@ -10,7 +10,7 @@ class Validate:
         """validates data coming in to ensure it has all required keys
 
         Args:
-            data (dictionary): data from request
+            data (dictionary): contains payload - read documentation for contents
 
         Returns:
             bool: True if specified key is available
