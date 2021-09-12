@@ -16,8 +16,3 @@ def send_sms():
         return json.dumps({"status": "error", "error": lang.error['invalid_phone']}), 400
 
     return json.dumps({"status": "success", "message": "your message was sent successfully"}), 200
-
-
-if __name__ == "__main__":
-    # Only for debugging while developing
-    app.run(host='0.0.0.0', debug=True)
