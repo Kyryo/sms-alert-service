@@ -39,6 +39,6 @@ Failed requests are flagged by 4XX status codes. Errors in this range generally 
     "recipient": "+265111222333",
     "message": "Hello from Kyryo!",
     "app": "ART",
-    "brand_name": "EGPAF"
+    "brand_name": "some-cool-company"
 }
 ```
