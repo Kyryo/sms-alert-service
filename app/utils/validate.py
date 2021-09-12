@@ -42,6 +42,7 @@ class Validate:
         except Exception as e:
             #! [TODO] change print to logging
             print("DevOps, some error occured:", e)
+            return False
 
         else:
 
