@@ -5,7 +5,7 @@ logging.basicConfig(filename='error.log', level=logging.DEBUG)
 
 class Validate:
 
-    def __init__(self, data) -> None:
+    def __init__(self, data: str) -> None:
         self.data = data
 
     def has_required_keys(self) -> bool:
