@@ -1,10 +1,11 @@
 import os
+from typing import Any
 from twilio.rest import Client
 
 
 class Send:
 
-    def __init__(self, params) -> None:
+    def __init__(self, params: dict[str, Any]) -> None:
         self.params = params
 
     def message(self):
