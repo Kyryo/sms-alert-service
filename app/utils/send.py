@@ -5,7 +5,7 @@ from twilio.rest import Client
 
 class Send:
 
-    def __init__(self, params: dict[str, Any]) -> None:
+    def __init__(self, params: dict[str, str]) -> None:
         self.params = params
 
     def message(self):

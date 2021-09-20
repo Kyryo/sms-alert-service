@@ -19,3 +19,9 @@ def send_sms():
     #! [TODO] check if the SMS was sent successfully
     #! [TODO] return appropriate response
     return json.dumps({"status": "success", "message": "your message was sent successfully"}), 200
+
+
+@app.route('/', methods=['POST'])
+def test():
+    data = json.loads(request.data)
+    return json.dumps({"status": "success", "message": data}), 200
