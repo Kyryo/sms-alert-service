@@ -18,7 +18,7 @@ class Validate:
             bool: True if specified key is available
         """
 
-        expected_keys = ("message", "recipient")
+        expected_keys = ("body", "sender", "recipient")
 
         if not all(keys in self.data for keys in expected_keys):
 

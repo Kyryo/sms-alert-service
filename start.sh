@@ -1,6 +1,6 @@
 #!/bin/bash
 app="alert-api"
 docker build -t ${app} .
-docker run -d -p 80:80 \
+docker run -d -p 8080:8080 \
   --name=${app} \
   -v $PWD:/app ${app}
