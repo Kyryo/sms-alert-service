@@ -29,7 +29,7 @@ sudo docker stop alert-api && sudo docker start alert-api
 
 ## Request & response structure
 
-The API primarily consumes and returns JSON. It makes use of a number of HTTP verbs for manipulating and access resources. All calls must be accompanied by a JSON payload and a Content-type=application/json header. Below is a summary of the verbs the API recognises.
+The API primarily consumes and returns JSON. All calls must be accompanied by a JSON payload and a Content-type=application/json header. Below is a summary of the verb(s) the API recognises.
 
 | Verb        | Interpretation                    | Expected responses |
 | ------------| ----------------------------------|--------------------|
