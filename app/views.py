@@ -7,7 +7,7 @@ import json
 
 @app.route('/v1/sms/send', methods=['POST'])
 def send_sms():
-    #! [TODO] would be nice to check that the data coming in is really a JSON
+    #! [TODO] would be nice to check that the data coming in is really JSON
     data = json.loads(request.data)
 
     validator = validate.Validate(data)
@@ -15,11 +15,16 @@ def send_sms():
     if not validator.is_valid_phone_number():
         return json.dumps({"status": "error", "error": lang.error['invalid_phone']}), 400
 
-    # * try to send the SMS
-    params = {}
+    # * set up the required params
+    params = {
+        "recipient": data["recipient"],
+        "body": data["body"],
+        "sender": data["sender"]
+    }
+
     send_obj = send.Send(params)
 
-    # * check if the SMS was sent successfully
+    # * attempt sending and check if the SMS was sent successfully
     if(send_obj.message()):
 
         # * return appropriate response
