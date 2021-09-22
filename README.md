@@ -6,7 +6,7 @@ A simple service for sending SMS Alerts using Twilio's SMS API
 
 ## Starting the service
 
-First check if the port specified in the start.sh is free, by running the following command:
+First check if the port specified in the start.sh is free, by running the below command. Please note that subsquent steps assumes that you have Docker installed on your platform.
 
 ```bash
 sudo nc localhost 8080 < /dev/null; echo $?
