@@ -44,6 +44,12 @@ Failed requests are flagged by 4XX status codes. Errors in this range generally 
 }
 ```
 
+## Endpoint
+
+| Endpoint    | HTTP Method                       | Description        |
+| ------------| ----------------------------------|--------------------|
+|/v1/sms/send | POST                              |Sends SMS alert     |
+
 ## Sample Payload
 
 For sender you can use alphanumeric sender ID or the normal phone number (e.g. +265999111222). You can find out which countries support alphanumeric sender IDs on [https://support.twilio.com/hc/en-us/articles/223133767-International-support-for-Alphanumeric-Sender-ID]
