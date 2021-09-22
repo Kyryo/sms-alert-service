@@ -18,7 +18,7 @@ class Send:
         auth_token = os.environ['TWILIO_AUTH_TOKEN']
         client = Client(account_sid, auth_token)
 
-        #!   [TODO] handle the exception better - handle specific exception and not just everything, that's bad code!
+        #!   [TODO] handle the exception better - handle specific exception and not everything!
         try:
             message = client.messages \
                 .create(
